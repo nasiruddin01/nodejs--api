@@ -3,15 +3,16 @@ const http = require("http");
 const { handleReqRes } = require("./helpers/handleReqRes");
 const environment = require("./helpers/environment");
 const data = require("./lib/data");
+const { result } = require("lodash");
 
 const app = {};
 
-data.read(
+data.delete(
   "test",
   "newFile",
 
-  (err, data) => {
-    console.log(err, data);
+  (err) => {
+    console.log(err);
   }
 );
 
